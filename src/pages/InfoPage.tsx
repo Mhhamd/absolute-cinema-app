@@ -124,7 +124,10 @@ function InfoPage() {
                     })}
                     <SimliarContainer>
                         <h1>Similar</h1>
-                        <Splide options={SplideOptions}>
+                        <Splide
+                            key={similarData?.results?.length || 0}
+                            options={SplideOptions}
+                        >
                             {similarData?.results?.length ? (
                                 similarData.results.map((item) => (
                                     <SplideSlide key={item.id}>
