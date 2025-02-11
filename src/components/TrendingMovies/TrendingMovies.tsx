@@ -41,7 +41,7 @@ function TrendingMovies() {
                         return (
                             <SplideSlide key={item.id}>
                                 <CardContainer>
-                                    <Card>
+                                    <Card onClick={scrollToTop}>
                                         <img
                                             src={getImageUrl(
                                                 item.poster_path,
