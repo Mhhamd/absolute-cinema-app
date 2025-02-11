@@ -125,8 +125,8 @@ function InfoPage() {
                     <SimliarContainer>
                         <h1>Similar</h1>
                         <Splide options={SplideOptions}>
-                            {similarData?.results.map((item) => {
-                                return (
+                            {similarData?.results?.length ? (
+                                similarData.results.map((item) => (
                                     <SplideSlide key={item.id}>
                                         <CardContainer onClick={scrollToTop}>
                                             <Card>
@@ -153,8 +153,10 @@ function InfoPage() {
                                             </Card>
                                         </CardContainer>
                                     </SplideSlide>
-                                );
-                            })}
+                                ))
+                            ) : (
+                                <div>Loading similar movies...</div>
+                            )}
                         </Splide>
                     </SimliarContainer>
                 </TrailerContainer>
