@@ -3,6 +3,7 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
+    "homepage": "https://muhammedsoliman7.github.io/absolute-cinema-app",
     "scripts": {
         "dev": "vite",
         "build": "vite build",
