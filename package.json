@@ -3,14 +3,11 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
-    "homepage": "https://muhammedsoliman7.github.io/absolute-cinema-app/",
     "scripts": {
         "dev": "vite",
-        "build": "vite build",
+        "build": "tsc -b && vite build",
         "lint": "eslint .",
-        "preview": "vite preview",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d dist"
+        "preview": "vite preview"
     },
     "dependencies": {
         "@reduxjs/toolkit": "^2.5.1",
