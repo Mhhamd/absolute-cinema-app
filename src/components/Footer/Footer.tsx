@@ -15,53 +15,43 @@ function Footer() {
             <FooterContent>
                 <ul>
                     <li>
-                        <Link onClick={scrollToTop} to="/">
+                        <Link className="active" onClick={scrollToTop} to="/">
                             Home
                         </Link>
                     </li>
                     <li>
-                        <Link
-                            onClick={() => {
-                                window.scrollTo({
-                                    top: 0,
-                                    behavior: 'smooth',
-                                });
-                            }}
-                            to={'/contact/'}
-                        >
-                            Contact us
-                        </Link>
+                        <a className="disabled">Contact us</a>
                     </li>
                     <li>
-                        <a href="/">Terms of service</a>
+                        <a className="disabled">Terms of service</a>
                     </li>
                     <li>
-                        <a href="/">About us</a>
+                        <a className="disabled">About us</a>
                     </li>
                 </ul>
                 <ul>
                     <li>
-                        <a href="/">Live</a>
+                        <a className="disabled">Live</a>
                     </li>
                     <li>
-                        <a href="/">FAQ</a>
+                        <a className="disabled">FAQ</a>
                     </li>
                     <li>
-                        <a href="/">Premium</a>
+                        <a className="disabled">Premium</a>
                     </li>
                     <li>
-                        <a href="/">Privacy policy</a>
+                        <a className="disabled">Privacy policy</a>
                     </li>
                 </ul>
                 <ul>
                     <li>
-                        <a href="/">You must watch</a>
+                        <a className="disabled">You must watch</a>
                     </li>
                     <li>
-                        <a href="/">Recent release</a>
+                        <a className="disabled">Recent release</a>
                     </li>
                     <li>
-                        <a href="/">Top IMDB</a>
+                        <a className="disabled">Top IMDB</a>
                     </li>
                 </ul>
             </FooterContent>
@@ -128,7 +118,7 @@ const FooterContent = styled.div`
         flex-direction: column;
         gap: 12px;
     }
-    a {
+    .active {
         color: white;
         text-decoration: none;
         font-weight: 500;
@@ -151,8 +141,16 @@ const FooterContent = styled.div`
             width: 100%;
         }
     }
-    a:hover {
+    .active:hover {
         color: #abaaaa;
+    }
+    .disabled {
+        cursor: not-allowed;
+        color: gray;
+        text-decoration: none;
+        font-weight: 500;
+        letter-spacing: 2px;
+        transition: 0.5s;
     }
     @media (max-width: 895px) {
         a {

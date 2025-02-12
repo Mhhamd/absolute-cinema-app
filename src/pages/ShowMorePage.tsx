@@ -70,7 +70,6 @@ function ShowMorePage() {
         setPageNumber((prev) => prev + 1);
     };
     const handleDecrement = () => {
-        console.log(pageNumber);
         if (pageNumber > 1) {
             scrollToTop();
 
