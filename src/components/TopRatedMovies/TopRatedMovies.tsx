@@ -31,7 +31,7 @@ function TopRatedMovies() {
         <Wrapper>
             <FlexContainer>
                 <h2>Top Rated Movies</h2>
-                <StyledLink onClick={scrollToTop} to={'/more/top_rated'}>
+                <StyledLink onClick={scrollToTop} to={'/more/movie'}>
                     Show More
                 </StyledLink>
             </FlexContainer>
